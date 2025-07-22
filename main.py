@@ -8,7 +8,7 @@ from transformer import Agent
 
 def main():
     logger.info("Initializing Scraper Engine")
-    tickers = json.load(open("./scraper/tickers.json", "r"))[:20]
+    tickers = json.load(open("./scraper/tickers.json", "r"))
     client = IBKR(tickers)
     result = client.run()
     transformer = Agent(result)
